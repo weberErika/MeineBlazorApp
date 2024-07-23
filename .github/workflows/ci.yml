@@ -32,3 +32,5 @@ jobs:
       with:
         github_token: ${{ secrets.ACCESS_TOKEN }}
         publish_dir: ./publish/wwwroot
+        keep_files: true  # Added to keep existing files
+        force_orphan: true  # Forces the action to use an orphan branch, avoiding conflicts
