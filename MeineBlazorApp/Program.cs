@@ -1,10 +1,13 @@
 using MeineBlazorApp.Components;
+using MeineBlazorApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddSingleton<ProductService>();
 
 var app = builder.Build();
 
